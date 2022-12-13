@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ListaBackups\**" />
+    <Compile Remove="ListaClientes\**" />
+    <EmbeddedResource Remove="ListaBackups\**" />
+    <EmbeddedResource Remove="ListaClientes\**" />
+    <None Remove="ListaBackups\**" />
+    <None Remove="ListaClientes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlackBackup.Application\BlackBackup.Application.csproj" />
+    <ProjectReference Include="..\BlackBackup.Domain\BlackBackup.Domain.csproj" />
+    <ProjectReference Include="..\BlackBackup.Infra\BlackBackup.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
