@@ -1,8 +1,9 @@
 ﻿using BlackBackup.Domain.Entities;
+using BlackBackup.Infra.EFCoreSQLite.Configuracao;
 using Microsoft.EntityFrameworkCore;
 using System.Windows.Forms;
 
-namespace BlackBackup.Infra
+namespace BlackBackup.Infra.EFCoreSQLite
 {
     public class DataSQLiteContext : DbContext
     {
@@ -23,7 +24,7 @@ namespace BlackBackup.Infra
 
         public void DeatchAllEntities()
         {
-            var changedEntrieCopy = this.ChangeTracker.Entries()
+            var changedEntrieCopy = ChangeTracker.Entries()
                 .Where(e => e.State == EntityState.Added ||
                             e.State == EntityState.Modified ||
                             e.State == EntityState.Deleted)

@@ -1,5 +1,6 @@
 ﻿using BlackBackup.Domain.Entities;
 using BlackBackup.Domain.Interfaces.Conexoes;
+using BlackBackup.Infra.EFCoreSQLite;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlackBackup.Infra.Repository

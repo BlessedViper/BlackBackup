@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace BlackBackup.Infra
+namespace BlackBackup.Infra.EFCoreSQLite.Configuracao
 {
     public class ConfiguracaoBucket : IEntityTypeConfiguration<Bucket>
     {

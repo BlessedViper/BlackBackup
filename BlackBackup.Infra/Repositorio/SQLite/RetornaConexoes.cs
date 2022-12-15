@@ -1,5 +1,6 @@
 ﻿using BlackBackup.Domain.Entities;
 using BlackBackup.Domain.Interfaces.Conexoes;
+using BlackBackup.Infra.EFCoreSQLite;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlackBackup.Infra.Repository
@@ -15,7 +16,7 @@ namespace BlackBackup.Infra.Repository
         public async Task<List<Bucket>> RetornarConexoesAsync()
         {
             var buckets = await _context.Buckets.ToListAsync();
-            foreach(var bucket in buckets)
+            foreach (var bucket in buckets)
             {
                 bucket.IdChaveAplicacao = Shared.CripInfo.Descriptografar(bucket.IdChaveAplicacao);
                 bucket.ChaveAplicacao = Shared.CripInfo.Descriptografar(bucket.ChaveAplicacao);

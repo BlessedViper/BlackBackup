@@ -9,7 +9,7 @@ namespace BlackBackup.Controller
         public ICriaBd? CriaBancoDados { get; set; }
         private static string _caminhoBancoDados = @$"{System.Windows.Forms.Application.StartupPath}\Data";
         private readonly string _caminhoBancoDadosArquivo = @$"{_caminhoBancoDados}\Data.db";
-        
+
         public void VerificaExistenciaBd()
         {
             if (File.Exists(_caminhoBancoDadosArquivo))

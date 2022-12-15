@@ -1,8 +1,6 @@
 ﻿using BlackBackup.Controller.Conexoes;
 using BlackBackup.Domain.Entities;
-using BlackBackup.Domain.Interfaces.Conexoes;
 using BlackBackup.Domain.Interfaces.Controller.Conexoes;
-using BlackBackup.Infra.Repository;
 using MaterialSkin;
 
 namespace BlackBackup.Presentation.Views

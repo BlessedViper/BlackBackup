@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 
-namespace BlackBackup.Infra
+namespace BlackBackup.Infra.SqlClient
 {
     public static class BuilderConnection
     {

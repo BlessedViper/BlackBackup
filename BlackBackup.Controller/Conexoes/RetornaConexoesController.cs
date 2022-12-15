@@ -1,7 +1,7 @@
 ﻿using BlackBackup.Domain.Entities;
 using BlackBackup.Domain.Interfaces.Conexoes;
 using BlackBackup.Domain.Interfaces.Controller.Conexoes;
-using BlackBackup.Infra;
+using BlackBackup.Infra.EFCoreSQLite;
 using BlackBackup.Infra.Repository;
 
 namespace BlackBackup.Controller.Conexoes

@@ -1,14 +1,8 @@
 ﻿using BlackBackup.Domain.Entities;
 using BlackBackup.Domain.Interfaces.Conexoes;
 using BlackBackup.Domain.Interfaces.Controller.Conexoes;
-using BlackBackup.Infra;
+using BlackBackup.Infra.EFCoreSQLite;
 using BlackBackup.Infra.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BlackBackup.Controller.Conexoes
 {
