@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackBackup.Domain.Interfaces.Conexoes
+namespace BlackBackup.Domain.Interfaces.Controller.Conexoes
 {
-    public interface IRetornaConexoes
+    public interface IExcluirConexaoController
     {
-        Task<List<Bucket>> RetornarConexoesAsync();
+        void ExcluirConexao(Bucket bucket);
     }
 }

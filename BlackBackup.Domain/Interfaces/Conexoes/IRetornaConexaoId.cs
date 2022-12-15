@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace BlackBackup.Domain.Interfaces.Conexoes
 {
-    public interface IRetornaConexoes
+    public interface IRetornaConexaoId
     {
-        Task<List<Bucket>> RetornarConexoesAsync();
+        Bucket RetornaBucket(int id);
     }
 }

@@ -5,7 +5,7 @@ namespace BlackBackup.Infra.ManipulacaoBd
 {
     public class CriaBd : ICriaBd
     {
-        public ICriaTabelas? CriaTabelas { get; set; }
+        public CriaTabelas? CriaTabelas { get; set; }
         public void CriaArquivoBd(string caminhoBancoDados)
         {
             try

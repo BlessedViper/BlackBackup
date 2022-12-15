@@ -14,6 +14,8 @@ namespace BlackBackup.Infra.Repository
         {
             if (bucket is not null)
             {
+                bucket.IdChaveAplicacao = Shared.CripInfo.Criptografar(bucket.IdChaveAplicacao);
+                bucket.ChaveAplicacao = Shared.CripInfo.Criptografar(bucket.ChaveAplicacao);
                 _context.Add(bucket);
                 _context.SaveChanges();
             }

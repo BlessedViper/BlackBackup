@@ -2,6 +2,6 @@
 {
     public interface IValidaBd
     {
-        void VerificaExistenciaBd(string caminhoBancoDados);
+        void VerificaExistenciaBd();
     }
 }
