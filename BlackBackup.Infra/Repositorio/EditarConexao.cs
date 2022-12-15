@@ -13,6 +13,8 @@ namespace BlackBackup.Infra.Repository
         }
         public void Editar(Bucket bucket)
         {
+            bucket.IdChaveAplicacao = Shared.CripInfo.Criptografar(bucket.IdChaveAplicacao);
+            bucket.ChaveAplicacao = Shared.CripInfo.Criptografar(bucket.ChaveAplicacao);
             _context.Entry(bucket).State = EntityState.Modified;
             _context.SaveChanges();
             _context.DeatchAllEntities();

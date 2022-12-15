@@ -6,12 +6,20 @@ namespace BlackBackup.Infra
 {
     public class DataSQLiteContext : DbContext
     {
-        private readonly string _connect = $@"{Application.StartupPath}\Data.db; Version=3;";
+        private readonly string _connect = $"Data Source={Application.StartupPath}\\Data\\Data.db";
         protected override void OnConfiguring(DbContextOptionsBuilder opts)
         {
-            opts.UseSqlite(_connect);
+            opts.UseLazyLoadingProxies().UseSqlite(_connect);
         }
-        public DbSet<Bucket>? Buckets { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ConfiguracaoBucket());
+            modelBuilder.Entity<Bucket>()
+            .Property(e => e.Id)
+            .ValueGeneratedOnAdd();
+        }
+
+        public DbSet<Bucket> Buckets { get; set; }
 
         public void DeatchAllEntities()
         {

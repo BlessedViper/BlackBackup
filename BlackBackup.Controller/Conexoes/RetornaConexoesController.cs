@@ -13,7 +13,7 @@ namespace BlackBackup.Controller.Conexoes
         {
             using var context = new DataSQLiteContext();
             RetornaConexoesInfra = new RetornaConexoes(context);
-            return await RetornaConexoesInfra.RetornarConexoes();
+            return await RetornaConexoesInfra.RetornarConexoesAsync();
         }
     }
 }

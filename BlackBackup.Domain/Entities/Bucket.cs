@@ -1,24 +1,22 @@
-﻿using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace BlackBackup.Domain.Entities
 {
     public class Bucket
     {
-        public Bucket(string applicationKeyId, string applicationKey)
-        {
-            IdChaveAplicacao = applicationKeyId;
-            ChaveAplicacao = applicationKey;
-            Credencial = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{applicationKeyId}:{applicationKey}"));
-        }
-        public int Id { get; private set; }
-        public string IdChaveAplicacao { get; private set; }
-        public string ChaveAplicacao { get; private set; }
-        public string Credencial { get; private set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
+        public int Id { get; set; }
+        public string IdChaveAplicacao { get; set; }
+        public string ChaveAplicacao { get; set; }
+        [NotMapped]
+        public string? Credencial { get; set; }
         [JsonPropertyName("BucketName")]
-        public string NomeBucket { get; private set; }
+        public string? NomeBucket { get; set; }
         [JsonPropertyName("BucketId")]
-        public string BucketId { get; set; }
+        public string? BucketId { get; set; }
         public string? Apelido { get; set; }
     }
 }

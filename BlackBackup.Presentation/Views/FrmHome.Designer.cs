@@ -139,16 +139,16 @@
             this.mlvConexoes.TabIndex = 3;
             this.mlvConexoes.UseCompatibleStateImageBehavior = false;
             this.mlvConexoes.View = System.Windows.Forms.View.Details;
+            this.mlvConexoes.SelectedIndexChanged += new System.EventHandler(this.mlvConexoes_SelectedIndexChanged);
             // 
             // Id
             // 
             this.Id.Text = "Id";
-            this.Id.Width = 100;
             // 
             // Conexao
             // 
-            this.Conexao.Text = "Conexão";
-            this.Conexao.Width = 500;
+            this.Conexao.Text = "Conexões";
+            this.Conexao.Width = 1114;
             // 
             // btnEditar
             // 
@@ -170,6 +170,7 @@
             this.btnEditar.UseAccentColor = false;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Visible = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -191,6 +192,7 @@
             this.btnExcluir.UseAccentColor = false;
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Visible = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAdicionar
             // 
@@ -386,7 +388,7 @@
         private MaterialSkin.Controls.MaterialButton btnAtualizar;
         private MaterialSkin.Controls.MaterialListView materialListView1;
         private MaterialSkin.Controls.MaterialButton btnBackup;
-        private ColumnHeader Id;
         private ColumnHeader Conexao;
+        private ColumnHeader Id;
     }
 }

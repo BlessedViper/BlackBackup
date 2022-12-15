@@ -1,6 +1,6 @@
 ﻿namespace BlackBackup.Presentation.Views
 {
-    partial class FrmAdicionar
+    partial class FrmAdicionarEditarConexoes
     {
         /// <summary>
         /// Required designer variable.
